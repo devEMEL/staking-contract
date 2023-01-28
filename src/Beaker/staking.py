@@ -20,18 +20,31 @@ class Stake(Application):
     )
 
     @external
-    def stake(self, txn: abi.AssetTransferTransaction, app: abi.Application, key: abi.String):
+    def stake(
+        self,
+        txn: abi.AssetTransferTransaction,
+        key: abi.String,
+        app: abi.Application, # type: ignore[assignment]
+        *,
+        output: abi.Uint64
+    ):
         return Seq(
+            (app_id := App.globalGetEx(app=app.application_id(), key=key.get())),
+            Assert(app_id.hasValue()),
             Assert(
                 And(
                     self.is_staking == Int(0),
+                    txn.get().type_enum() == TxnType.AssetTransfer,
                     txn.get().asset_amount() > Int(0),
                     txn.get().asset_receiver() == self.address,
-                    txn.get().xfer_asset() == App.globalGetEx(app=app.application_id(), key=key.get())
+                    txn.get().xfer_asset() == app_id.value()
                 )
             ),
             self.is_staking.set(Int(1)),
             self.stake_amount.set(txn.get().asset_amount()),
-            self.stake_timestamp.set(Global.latest_timestamp())
+            self.stake_timestamp.set(Global.latest_timestamp()),
+            output.set(app_id.value())
         )
 
+
+Stake().dump()

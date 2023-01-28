@@ -1,0 +1,65 @@
+{
+    "hints": {},
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMSA0CmJ5dGVjYmxvY2sgMHg2OTczNWY3Mzc0NjE2YjY5NmU2Nwp0eG4gTnVtQXBwQXJncwppbnRjXzAgLy8gMAo9PQpibnogbWFpbl9sNAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGE2OTUzZmVhIC8vICJzdGFrZShheGZlcixzdHJpbmcsYXBwbGljYXRpb24pdWludDY0Igo9PQpibnogbWFpbl9sMwplcnIKbWFpbl9sMzoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpzdG9yZSAxCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKaW50Y18wIC8vIDAKZ2V0Ynl0ZQpzdG9yZSAyCnR4biBHcm91cEluZGV4CmludGNfMSAvLyAxCi0Kc3RvcmUgMApsb2FkIDAKZ3R4bnMgVHlwZUVudW0KaW50Y18yIC8vIGF4ZmVyCj09CmFzc2VydApsb2FkIDAKbG9hZCAxCmxvYWQgMgpjYWxsc3ViIHN0YWtlXzEKc3RvcmUgMwpwdXNoYnl0ZXMgMHgxNTFmN2M3NSAvLyAweDE1MWY3Yzc1CmxvYWQgMwppdG9iCmNvbmNhdApsb2cKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDQ6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KYm56IG1haW5fbDYKZXJyCm1haW5fbDY6CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCj09CmFzc2VydApjYWxsc3ViIGNyZWF0ZV8wCmludGNfMSAvLyAxCnJldHVybgoKLy8gY3JlYXRlCmNyZWF0ZV8wOgppbnRjXzEgLy8gMQpyZXR1cm4KCi8vIHN0YWtlCnN0YWtlXzE6CnN0b3JlIDYKc3RvcmUgNQpzdG9yZSA0CmxvYWQgNgp0eG5hcyBBcHBsaWNhdGlvbnMKbG9hZCA1CmV4dHJhY3QgMiAwCmFwcF9nbG9iYWxfZ2V0X2V4CnN0b3JlIDgKc3RvcmUgNwpsb2FkIDgKYXNzZXJ0CnR4biBTZW5kZXIKYnl0ZWNfMCAvLyAiaXNfc3Rha2luZyIKYXBwX2xvY2FsX2dldAppbnRjXzAgLy8gMAo9PQpsb2FkIDQKZ3R4bnMgVHlwZUVudW0KaW50Y18yIC8vIGF4ZmVyCj09CiYmCmxvYWQgNApndHhucyBBc3NldEFtb3VudAppbnRjXzAgLy8gMAo+CiYmCmxvYWQgNApndHhucyBBc3NldFJlY2VpdmVyCmdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCj09CiYmCmxvYWQgNApndHhucyBYZmVyQXNzZXQKbG9hZCA3Cj09CiYmCmFzc2VydAp0eG4gU2VuZGVyCmJ5dGVjXzAgLy8gImlzX3N0YWtpbmciCmludGNfMSAvLyAxCmFwcF9sb2NhbF9wdXQKdHhuIFNlbmRlcgpwdXNoYnl0ZXMgMHg3Mzc0NjE2YjY1NWY2MTZkNmY3NTZlNzQgLy8gInN0YWtlX2Ftb3VudCIKbG9hZCA0Cmd0eG5zIEFzc2V0QW1vdW50CmFwcF9sb2NhbF9wdXQKdHhuIFNlbmRlcgpwdXNoYnl0ZXMgMHg3Mzc0NjE2YjY1NWY3NDY5NmQ2NTczNzQ2MTZkNzAgLy8gInN0YWtlX3RpbWVzdGFtcCIKZ2xvYmFsIExhdGVzdFRpbWVzdGFtcAphcHBfbG9jYWxfcHV0CmxvYWQgNwpyZXRzdWI=",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "schema": {
+        "local": {
+            "declared": {
+                "stake_amount": {
+                    "type": "uint64",
+                    "key": "stake_amount",
+                    "descr": ""
+                },
+                "stake_timestamp": {
+                    "type": "uint64",
+                    "key": "stake_timestamp",
+                    "descr": ""
+                },
+                "is_staking": {
+                    "type": "uint64",
+                    "key": "is_staking",
+                    "descr": ""
+                }
+            },
+            "reserved": {}
+        },
+        "global": {
+            "declared": {
+                "interest_per_sec": {
+                    "type": "uint64",
+                    "key": "interest_per_sec",
+                    "descr": ""
+                }
+            },
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "Stake",
+        "methods": [
+            {
+                "name": "stake",
+                "args": [
+                    {
+                        "type": "axfer",
+                        "name": "txn"
+                    },
+                    {
+                        "type": "string",
+                        "name": "key"
+                    },
+                    {
+                        "type": "application",
+                        "name": "app"
+                    }
+                ],
+                "returns": {
+                    "type": "uint64"
+                }
+            }
+        ],
+        "networks": {}
+    }
+}

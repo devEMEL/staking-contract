@@ -1,0 +1,123 @@
+#pragma version 8
+intcblock 0 1 4
+bytecblock 0x69735f7374616b696e67
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l4
+txna ApplicationArgs 0
+pushbytes 0xa6953fea // "stake(axfer,string,application)uint64"
+==
+bnz main_l3
+err
+main_l3:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+store 1
+txna ApplicationArgs 2
+intc_0 // 0
+getbyte
+store 2
+txn GroupIndex
+intc_1 // 1
+-
+store 0
+load 0
+gtxns TypeEnum
+intc_2 // axfer
+==
+assert
+load 0
+load 1
+load 2
+callsub stake_1
+store 3
+pushbytes 0x151f7c75 // 0x151f7c75
+load 3
+itob
+concat
+log
+intc_1 // 1
+return
+main_l4:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l6
+err
+main_l6:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+callsub create_0
+intc_1 // 1
+return
+
+// create
+create_0:
+intc_1 // 1
+return
+
+// stake
+stake_1:
+store 6
+store 5
+store 4
+load 6
+txnas Applications
+load 5
+extract 2 0
+app_global_get_ex
+store 8
+store 7
+load 8
+assert
+txn Sender
+bytec_0 // "is_staking"
+app_local_get
+intc_0 // 0
+==
+load 4
+gtxns TypeEnum
+intc_2 // axfer
+==
+&&
+load 4
+gtxns AssetAmount
+intc_0 // 0
+>
+&&
+load 4
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+&&
+load 4
+gtxns XferAsset
+load 7
+==
+&&
+assert
+txn Sender
+bytec_0 // "is_staking"
+intc_1 // 1
+app_local_put
+txn Sender
+pushbytes 0x7374616b655f616d6f756e74 // "stake_amount"
+load 4
+gtxns AssetAmount
+app_local_put
+txn Sender
+pushbytes 0x7374616b655f74696d657374616d70 // "stake_timestamp"
+global LatestTimestamp
+app_local_put
+load 7
+retsub

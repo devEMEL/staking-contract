@@ -1,0 +1,26 @@
+{
+    "name": "Stake",
+    "methods": [
+        {
+            "name": "stake",
+            "args": [
+                {
+                    "type": "axfer",
+                    "name": "txn"
+                },
+                {
+                    "type": "string",
+                    "name": "key"
+                },
+                {
+                    "type": "application",
+                    "name": "app"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            }
+        }
+    ],
+    "networks": {}
+}
