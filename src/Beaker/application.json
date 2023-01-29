@@ -1,7 +1,7 @@
 {
     "hints": {},
     "source": {
-        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMSA0CmJ5dGVjYmxvY2sgMHg2OTczNWY3Mzc0NjE2YjY5NmU2Nwp0eG4gTnVtQXBwQXJncwppbnRjXzAgLy8gMAo9PQpibnogbWFpbl9sNgp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGE2OTUzZmVhIC8vICJzdGFrZShheGZlcixzdHJpbmcsYXBwbGljYXRpb24pdWludDY0Igo9PQpibnogbWFpbl9sNQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDFkM2Y2MDQwIC8vICJ1bnN0YWtlKCl2b2lkIgo9PQpibnogbWFpbl9sNAplcnIKbWFpbl9sNDoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiB1bnN0YWtlXzIKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDU6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CnR4bmEgQXBwbGljYXRpb25BcmdzIDEKc3RvcmUgMQp0eG5hIEFwcGxpY2F0aW9uQXJncyAyCmludGNfMCAvLyAwCmdldGJ5dGUKc3RvcmUgMgp0eG4gR3JvdXBJbmRleAppbnRjXzEgLy8gMQotCnN0b3JlIDAKbG9hZCAwCmd0eG5zIFR5cGVFbnVtCmludGNfMiAvLyBheGZlcgo9PQphc3NlcnQKbG9hZCAwCmxvYWQgMQpsb2FkIDIKY2FsbHN1YiBzdGFrZV8xCnN0b3JlIDMKcHVzaGJ5dGVzIDB4MTUxZjdjNzUgLy8gMHgxNTFmN2M3NQpsb2FkIDMKaXRvYgpjb25jYXQKbG9nCmludGNfMSAvLyAxCnJldHVybgptYWluX2w2Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CmJueiBtYWluX2w4CmVycgptYWluX2w4Ogp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAo9PQphc3NlcnQKY2FsbHN1YiBjcmVhdGVfMAppbnRjXzEgLy8gMQpyZXR1cm4KCi8vIGNyZWF0ZQpjcmVhdGVfMDoKaW50Y18xIC8vIDEKcmV0dXJuCgovLyBzdGFrZQpzdGFrZV8xOgpzdG9yZSA2CnN0b3JlIDUKc3RvcmUgNApsb2FkIDYKdHhuYXMgQXBwbGljYXRpb25zCmxvYWQgNQpleHRyYWN0IDIgMAphcHBfZ2xvYmFsX2dldF9leApzdG9yZSA4CnN0b3JlIDcKbG9hZCA4CmFzc2VydAp0eG4gU2VuZGVyCmJ5dGVjXzAgLy8gImlzX3N0YWtpbmciCmFwcF9sb2NhbF9nZXQKaW50Y18wIC8vIDAKPT0KbG9hZCA0Cmd0eG5zIFR5cGVFbnVtCmludGNfMiAvLyBheGZlcgo9PQomJgpsb2FkIDQKZ3R4bnMgQXNzZXRBbW91bnQKaW50Y18wIC8vIDAKPgomJgpsb2FkIDQKZ3R4bnMgQXNzZXRSZWNlaXZlcgpnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwo9PQomJgpsb2FkIDQKZ3R4bnMgWGZlckFzc2V0CmxvYWQgNwo9PQomJgphc3NlcnQKdHhuIFNlbmRlcgpieXRlY18wIC8vICJpc19zdGFraW5nIgppbnRjXzEgLy8gMQphcHBfbG9jYWxfcHV0CnR4biBTZW5kZXIKcHVzaGJ5dGVzIDB4NzM3NDYxNmI2NTVmNjE2ZDZmNzU2ZTc0IC8vICJzdGFrZV9hbW91bnQiCmxvYWQgNApndHhucyBBc3NldEFtb3VudAphcHBfbG9jYWxfcHV0CnR4biBTZW5kZXIKcHVzaGJ5dGVzIDB4NzM3NDYxNmI2NTVmNzQ2OTZkNjU3Mzc0NjE2ZDcwIC8vICJzdGFrZV90aW1lc3RhbXAiCmdsb2JhbCBMYXRlc3RUaW1lc3RhbXAKYXBwX2xvY2FsX3B1dApsb2FkIDcKcmV0c3ViCgovLyB1bnN0YWtlCnVuc3Rha2VfMjoKcmV0c3Vi",
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMSA0CmJ5dGVjYmxvY2sgMHg2OTczNWY3Mzc0NjE2YjY5NmU2NyAweDczNzQ2MTZiNjU1ZjYxNmQ2Zjc1NmU3NCAweDczNzQ2MTZiNjU1Zjc0Njk2ZDY1NzM3NDYxNmQ3MAp0eG4gTnVtQXBwQXJncwppbnRjXzAgLy8gMAo9PQpibnogbWFpbl9sNgp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGUwMGI3OGE5IC8vICJvcHRpbl9hc3NldChhc3NldCl2b2lkIgo9PQpibnogbWFpbl9sNQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGE2OTUzZmVhIC8vICJzdGFrZShheGZlcixzdHJpbmcsYXBwbGljYXRpb24pdWludDY0Igo9PQpibnogbWFpbl9sNAplcnIKbWFpbl9sNDoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpzdG9yZSAxCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKaW50Y18wIC8vIDAKZ2V0Ynl0ZQpzdG9yZSAyCnR4biBHcm91cEluZGV4CmludGNfMSAvLyAxCi0Kc3RvcmUgMApsb2FkIDAKZ3R4bnMgVHlwZUVudW0KaW50Y18yIC8vIGF4ZmVyCj09CmFzc2VydApsb2FkIDAKbG9hZCAxCmxvYWQgMgpjYWxsc3ViIHN0YWtlXzMKc3RvcmUgMwpwdXNoYnl0ZXMgMHgxNTFmN2M3NSAvLyAweDE1MWY3Yzc1CmxvYWQgMwppdG9iCmNvbmNhdApsb2cKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDU6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CnR4bmEgQXBwbGljYXRpb25BcmdzIDEKaW50Y18wIC8vIDAKZ2V0Ynl0ZQpjYWxsc3ViIG9wdGluYXNzZXRfMgppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sNjoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQpibnogbWFpbl9sMTAKdHhuIE9uQ29tcGxldGlvbgppbnRjXzEgLy8gT3B0SW4KPT0KYm56IG1haW5fbDkKZXJyCm1haW5fbDk6CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CmFzc2VydApjYWxsc3ViIG9wdGluXzEKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDEwOgp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAo9PQphc3NlcnQKY2FsbHN1YiBjcmVhdGVfMAppbnRjXzEgLy8gMQpyZXR1cm4KCi8vIGNyZWF0ZQpjcmVhdGVfMDoKcHVzaGJ5dGVzIDB4Njk2ZTc0NjU3MjY1NzM3NDVmNzA2NTcyNWY3MzY1NjMgLy8gImludGVyZXN0X3Blcl9zZWMiCmludGNfMSAvLyAxCmFwcF9nbG9iYWxfcHV0CnJldHN1YgoKLy8gb3B0aW4Kb3B0aW5fMToKdHhuIFNlbmRlcgpieXRlY18xIC8vICJzdGFrZV9hbW91bnQiCmludGNfMCAvLyAwCmFwcF9sb2NhbF9wdXQKdHhuIFNlbmRlcgpieXRlY18yIC8vICJzdGFrZV90aW1lc3RhbXAiCmludGNfMCAvLyAwCmFwcF9sb2NhbF9wdXQKdHhuIFNlbmRlcgpieXRlY18wIC8vICJpc19zdGFraW5nIgppbnRjXzAgLy8gMAphcHBfbG9jYWxfcHV0CnJldHN1YgoKLy8gb3B0aW5fYXNzZXQKb3B0aW5hc3NldF8yOgpzdG9yZSA5Cml0eG5fYmVnaW4KaW50Y18yIC8vIGF4ZmVyCml0eG5fZmllbGQgVHlwZUVudW0KbG9hZCA5CnR4bmFzIEFzc2V0cwppdHhuX2ZpZWxkIFhmZXJBc3NldAppbnRjXzAgLy8gMAppdHhuX2ZpZWxkIEFzc2V0QW1vdW50Cmdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCml0eG5fZmllbGQgQXNzZXRSZWNlaXZlcgpwdXNoaW50IDEwMDAgLy8gMTAwMAppdHhuX2ZpZWxkIEZlZQppdHhuX3N1Ym1pdApyZXRzdWIKCi8vIHN0YWtlCnN0YWtlXzM6CnN0b3JlIDYKc3RvcmUgNQpzdG9yZSA0CmxvYWQgNgp0eG5hcyBBcHBsaWNhdGlvbnMKbG9hZCA1CmV4dHJhY3QgMiAwCmFwcF9nbG9iYWxfZ2V0X2V4CnN0b3JlIDgKc3RvcmUgNwpsb2FkIDgKYXNzZXJ0CnR4biBTZW5kZXIKYnl0ZWNfMCAvLyAiaXNfc3Rha2luZyIKYXBwX2xvY2FsX2dldAppbnRjXzAgLy8gMAo9PQpsb2FkIDQKZ3R4bnMgVHlwZUVudW0KaW50Y18yIC8vIGF4ZmVyCj09CiYmCmxvYWQgNApndHhucyBBc3NldFJlY2VpdmVyCmdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCj09CiYmCmxvYWQgNApndHhucyBYZmVyQXNzZXQKbG9hZCA3Cj09CiYmCmFzc2VydAp0eG4gU2VuZGVyCmJ5dGVjXzAgLy8gImlzX3N0YWtpbmciCmludGNfMSAvLyAxCmFwcF9sb2NhbF9wdXQKdHhuIFNlbmRlcgpieXRlY18xIC8vICJzdGFrZV9hbW91bnQiCmxvYWQgNApndHhucyBBc3NldEFtb3VudAphcHBfbG9jYWxfcHV0CnR4biBTZW5kZXIKYnl0ZWNfMiAvLyAic3Rha2VfdGltZXN0YW1wIgpnbG9iYWwgTGF0ZXN0VGltZXN0YW1wCmFwcF9sb2NhbF9wdXQKbG9hZCA3CnJldHN1Yg==",
         "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
     },
     "schema": {
@@ -40,6 +40,18 @@
         "name": "Stake",
         "methods": [
             {
+                "name": "optin_asset",
+                "args": [
+                    {
+                        "type": "asset",
+                        "name": "asset_id"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
                 "name": "stake",
                 "args": [
                     {
@@ -57,13 +69,6 @@
                 ],
                 "returns": {
                     "type": "uint64"
-                }
-            },
-            {
-                "name": "unstake",
-                "args": [],
-                "returns": {
-                    "type": "void"
                 }
             }
         ],

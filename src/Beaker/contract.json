@@ -2,6 +2,18 @@
     "name": "Stake",
     "methods": [
         {
+            "name": "optin_asset",
+            "args": [
+                {
+                    "type": "asset",
+                    "name": "asset_id"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
             "name": "stake",
             "args": [
                 {
@@ -19,13 +31,6 @@
             ],
             "returns": {
                 "type": "uint64"
-            }
-        },
-        {
-            "name": "unstake",
-            "args": [],
-            "returns": {
-                "type": "void"
             }
         }
     ],
