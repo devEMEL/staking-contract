@@ -47,11 +47,11 @@ const truncate = (
 
 const buttonIds = [
   "connect",
-  "create_app",
-  "optin_to_asset",
+  // "create_app",
+  // "optin_to_asset",
   "optin_to_contract",
   "stake",
-  "unstake",
+  "unstake"
 ];
 const buttons: { [key: string]: HTMLButtonElement } = {};
 const accountsMenu = document.getElementById("accounts") as HTMLSelectElement;
@@ -74,32 +74,44 @@ buttons.connect.onclick = async () => {
   });
 };
 
-buttons.create_app.onclick = async () => {
-  const stakeApp = new Stake({
-    client: algodClient,
-    signer,
-    sender: accountsMenu.selectedOptions[0].value,
+buttons.connect.onclick = async () => {
+  await myAlgo.getAccounts();
+  myAlgo.accounts.forEach((account) => {
+    //call function to truncate address
+    truncate(account.address, 4, 4, 11);
+    accountsMenu.add(
+      new Option(`${account.name} - ${account.address}`, account.address)
+    );
+    console.log(account);
   });
-
-  const { appId, appAddress, txId } = await stakeApp.create();
-
-  document.getElementById(
-    "create_app_status"
-  ).innerHTML = `App created with id: ${appId} and address: ${appAddress} in txId: ${txId}`;
-  // fund on dispenser
 };
 
-buttons.optin_to_asset.onclick = async () => {
-  const stakeApp = new Stake({
-    client: algodClient,
-    signer,
-    sender: accountsMenu.selectedOptions[0].value,
-    appId: APPID,
-  });
+// buttons.create_app.onclick = async () => {
+//   const stakeApp = new Stake({
+//     client: algodClient,
+//     signer,
+//     sender: accountsMenu.selectedOptions[0].value,
+//   });
 
-  const result = await stakeApp.optin_asset({ asset_id: BigInt(156293328) });
-  console.log(result);
-};
+//   const { appId, appAddress, txId } = await stakeApp.create();
+
+//   document.getElementById(
+//     "create_app_status"
+//   ).innerHTML = `App created with id: ${appId} and address: ${appAddress} in txId: ${txId}`;
+//   // fund on dispenser
+// };
+
+// buttons.optin_to_asset.onclick = async () => {
+//   const stakeApp = new Stake({
+//     client: algodClient,
+//     signer,
+//     sender: accountsMenu.selectedOptions[0].value,
+//     appId: APPID,
+//   });
+
+//   const result = await stakeApp.optin_asset({ asset_id: BigInt(156293328) });
+//   console.log(result);
+// };
 
 buttons.optin_to_contract.onclick = async () => {
   const stakeApp = new Stake({
@@ -113,7 +125,8 @@ buttons.optin_to_contract.onclick = async () => {
   console.log(result);
 };
 
-buttons.stake.onclick = async () => {
+buttons.stake.onclick = async (e) => {
+  e.preventDefault();
   const stakeApp = new Stake({
     client: algodClient,
     signer,
