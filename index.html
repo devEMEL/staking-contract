@@ -18,6 +18,7 @@
         Algo Smart - Staking
       </div>
 
+      <select name="accounts" id="accounts">Select account</select>
       <button
         id="connect"
         class="shadow-xl shadow-black text-white bg-green-400 hover:bg-green-600 md:text-xs p-2 rounded-full"
@@ -31,7 +32,7 @@
         class="bg-[#151c25] py-4 flex flex-col justify-center items-center shadow-md shadow-green-500 rounded-xl w-[400px] h-auto mt-28"
       >
         <button
-          class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full"
+        id="optin_to_contract" class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full"
         >
           Optin To Contract
         </button>
@@ -46,16 +47,17 @@
               name="title"
               value=""
               required
+              id="stake_amount"
             />
             <button
-              class="my-2 w-[40%] ml-1 text-white bg-green-400 hover:bg-green-600 px-4 py-3 rounded-md"
+              class="my-2 w-[40%] ml-1 text-white bg-green-400 hover:bg-green-600 px-4 py-3 rounded-md" id="stake"
             >
               Stake
             </button>
           </div>
         </form>
         <button
-          class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full"
+          class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full" id="unstake"
         >
           Unstake ASC
         </button>
