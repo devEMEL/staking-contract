@@ -1,5 +1,4 @@
 import time
-from pyteal import *
 from staking import Stake
 from beaker.client import ApplicationClient
 from beaker import sandbox
