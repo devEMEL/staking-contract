@@ -4,13 +4,29 @@ bytecblock 0x69735f7374616b696e67
 txn NumAppArgs
 intc_0 // 0
 ==
-bnz main_l4
+bnz main_l6
 txna ApplicationArgs 0
 pushbytes 0xa6953fea // "stake(axfer,string,application)uint64"
 ==
-bnz main_l3
+bnz main_l5
+txna ApplicationArgs 0
+pushbytes 0x1d3f6040 // "unstake()void"
+==
+bnz main_l4
 err
-main_l3:
+main_l4:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub unstake_2
+intc_1 // 1
+return
+main_l5:
 txn OnCompletion
 intc_0 // NoOp
 ==
@@ -46,13 +62,13 @@ concat
 log
 intc_1 // 1
 return
-main_l4:
+main_l6:
 txn OnCompletion
 intc_0 // NoOp
 ==
-bnz main_l6
+bnz main_l8
 err
-main_l6:
+main_l8:
 txn ApplicationID
 intc_0 // 0
 ==
@@ -120,4 +136,8 @@ pushbytes 0x7374616b655f74696d657374616d70 // "stake_timestamp"
 global LatestTimestamp
 app_local_put
 load 7
+retsub
+
+// unstake
+unstake_2:
 retsub

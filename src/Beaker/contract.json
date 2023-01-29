@@ -20,6 +20,13 @@
             "returns": {
                 "type": "uint64"
             }
+        },
+        {
+            "name": "unstake",
+            "args": [],
+            "returns": {
+                "type": "void"
+            }
         }
     ],
     "networks": {}

@@ -46,5 +46,11 @@ class Stake(Application):
             output.set(app_id.value())
         )
 
+    # @external
+    # def unstake(self):
+    #     return Seq(
+            
+    #     )
+
 
 Stake().dump()
