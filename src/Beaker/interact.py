@@ -1,3 +1,4 @@
+import time
 from pyteal import *
 from staking import Stake
 from beaker.client import ApplicationClient
@@ -38,6 +39,11 @@ def test():
     print(asset_id.return_value)
     print(acct1_client.get_account_state())
     print(app_client.get_application_state())
+
+    time.sleep(180)
+
+    acct1_client.call(app.unstake, time=180, asset_id=156293328)
+    print(acct1_client.get_account_state())
 
 
 test()

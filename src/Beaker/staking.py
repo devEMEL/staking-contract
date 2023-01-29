@@ -56,9 +56,9 @@ class Stake(Application):
         return Seq(
             (asset_id := App.globalGetEx(app=app.application_id(), key=key.get())),
             Assert(asset_id.hasValue()),
+            Assert(self.is_staking == Int(0)),
             Assert(
                 And(
-                    self.is_staking == Int(0),
                     txn.get().type_enum() == TxnType.AssetTransfer,
                     txn.get().asset_amount() > Int(0),
                     txn.get().asset_receiver() == self.address,
@@ -71,11 +71,25 @@ class Stake(Application):
             output.set(asset_id.value())
         )
 
-    # @external
-    # def unstake(self):
-    #     return Seq(
-            
-    #     )
+    @external
+    def unstake(
+        self,
+        time: abi.Uint64,
+        asset_id: abi.Asset # type: ignore[assignment]
+    ):
+        return Seq(
+            Assert(self.is_staking == Int(1)),
+            Assert(Global.latest_timestamp() >= (self.stake_timestamp + time.get())),
+            (reward_amount := abi.Uint64()).set(self.stake_amount + ((Global.latest_timestamp() - self.stake_timestamp) * self.interest_per_sec)),
+            InnerTxnBuilder.Execute({
+                TxnField.type_enum: TxnType.AssetTransfer,
+                TxnField.xfer_asset: asset_id.asset_id(),
+                TxnField.asset_amount: reward_amount.get(),
+                TxnField.asset_receiver: Txn.sender(),
+                TxnField.fee: self.FEE
+            }),
+            self.is_staking.set(Int(0))
+        )
 
 
 Stake().dump()

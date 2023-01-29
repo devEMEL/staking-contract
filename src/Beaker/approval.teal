@@ -1,20 +1,45 @@
 #pragma version 8
-intcblock 0 1 4
-bytecblock 0x69735f7374616b696e67 0x7374616b655f616d6f756e74 0x7374616b655f74696d657374616d70
+intcblock 0 1 4 1000
+bytecblock 0x69735f7374616b696e67 0x7374616b655f74696d657374616d70 0x7374616b655f616d6f756e74 0x696e7465726573745f7065725f736563
 txn NumAppArgs
 intc_0 // 0
 ==
-bnz main_l6
+bnz main_l8
 txna ApplicationArgs 0
 pushbytes 0xe00b78a9 // "optin_asset(asset)void"
 ==
-bnz main_l5
+bnz main_l7
 txna ApplicationArgs 0
 pushbytes 0xa6953fea // "stake(axfer,string,application)uint64"
 ==
-bnz main_l4
+bnz main_l6
+txna ApplicationArgs 0
+pushbytes 0x3ac853b4 // "unstake(uint64,asset)void"
+==
+bnz main_l5
 err
-main_l4:
+main_l5:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 9
+txna ApplicationArgs 2
+intc_0 // 0
+getbyte
+store 10
+load 9
+load 10
+callsub unstake_4
+intc_1 // 1
+return
+main_l6:
 txn OnCompletion
 intc_0 // NoOp
 ==
@@ -50,7 +75,7 @@ concat
 log
 intc_1 // 1
 return
-main_l5:
+main_l7:
 txn OnCompletion
 intc_0 // NoOp
 ==
@@ -65,17 +90,17 @@ getbyte
 callsub optinasset_2
 intc_1 // 1
 return
-main_l6:
+main_l8:
 txn OnCompletion
 intc_0 // NoOp
 ==
-bnz main_l10
+bnz main_l12
 txn OnCompletion
 intc_1 // OptIn
 ==
-bnz main_l9
+bnz main_l11
 err
-main_l9:
+main_l11:
 txn ApplicationID
 intc_0 // 0
 !=
@@ -83,7 +108,7 @@ assert
 callsub optin_1
 intc_1 // 1
 return
-main_l10:
+main_l12:
 txn ApplicationID
 intc_0 // 0
 ==
@@ -94,7 +119,7 @@ return
 
 // create
 create_0:
-pushbytes 0x696e7465726573745f7065725f736563 // "interest_per_sec"
+bytec_3 // "interest_per_sec"
 intc_1 // 1
 app_global_put
 retsub
@@ -102,11 +127,11 @@ retsub
 // optin
 optin_1:
 txn Sender
-bytec_1 // "stake_amount"
+bytec_2 // "stake_amount"
 intc_0 // 0
 app_local_put
 txn Sender
-bytec_2 // "stake_timestamp"
+bytec_1 // "stake_timestamp"
 intc_0 // 0
 app_local_put
 txn Sender
@@ -117,18 +142,18 @@ retsub
 
 // optin_asset
 optinasset_2:
-store 9
+store 11
 itxn_begin
 intc_2 // axfer
 itxn_field TypeEnum
-load 9
+load 11
 txnas Assets
 itxn_field XferAsset
 intc_0 // 0
 itxn_field AssetAmount
 global CurrentApplicationAddress
 itxn_field AssetReceiver
-pushint 1000 // 1000
+intc_3 // 1000
 itxn_field Fee
 itxn_submit
 retsub
@@ -152,10 +177,15 @@ bytec_0 // "is_staking"
 app_local_get
 intc_0 // 0
 ==
+assert
 load 4
 gtxns TypeEnum
 intc_2 // axfer
 ==
+load 4
+gtxns AssetAmount
+intc_0 // 0
+>
 &&
 load 4
 gtxns AssetReceiver
@@ -173,13 +203,63 @@ bytec_0 // "is_staking"
 intc_1 // 1
 app_local_put
 txn Sender
-bytec_1 // "stake_amount"
+bytec_2 // "stake_amount"
 load 4
 gtxns AssetAmount
 app_local_put
 txn Sender
-bytec_2 // "stake_timestamp"
+bytec_1 // "stake_timestamp"
 global LatestTimestamp
 app_local_put
 load 7
+retsub
+
+// unstake
+unstake_4:
+store 13
+store 12
+txn Sender
+bytec_0 // "is_staking"
+app_local_get
+intc_1 // 1
+==
+assert
+global LatestTimestamp
+txn Sender
+bytec_1 // "stake_timestamp"
+app_local_get
+load 12
++
+>=
+assert
+txn Sender
+bytec_2 // "stake_amount"
+app_local_get
+global LatestTimestamp
+txn Sender
+bytec_1 // "stake_timestamp"
+app_local_get
+-
+bytec_3 // "interest_per_sec"
+app_global_get
+*
++
+store 14
+itxn_begin
+intc_2 // axfer
+itxn_field TypeEnum
+load 13
+txnas Assets
+itxn_field XferAsset
+load 14
+itxn_field AssetAmount
+txn Sender
+itxn_field AssetReceiver
+intc_3 // 1000
+itxn_field Fee
+itxn_submit
+txn Sender
+bytec_0 // "is_staking"
+intc_0 // 0
+app_local_put
 retsub

@@ -32,6 +32,22 @@
             "returns": {
                 "type": "uint64"
             }
+        },
+        {
+            "name": "unstake",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "time"
+                },
+                {
+                    "type": "asset",
+                    "name": "asset_id"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
         }
     ],
     "networks": {}
