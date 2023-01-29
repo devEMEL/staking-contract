@@ -7,6 +7,7 @@ from algosdk.atomic_transaction_composer import TransactionWithSigner
 from algosdk.future.transaction import AssetTransferTxn
 from beaker import Application, AccountStateValue, opt_in, external, create
 
+
 client = AlgoNode(Network.TestNet).algod()
 # client = sandbox.get_algod_client()
 
