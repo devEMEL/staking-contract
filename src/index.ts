@@ -1,3 +1,4 @@
+import "./app.css";
 import algosdk from "algosdk";
 
 import { MyAlgoSession } from "./wallets/myalgo";
@@ -100,17 +101,16 @@ buttons.optin_to_asset.onclick = async () => {
   console.log(result);
 };
 
-buttons.optin_to_contract.onclick = () => {
-  console.log("ok");
-  // const stakeApp = new Stake({
-  //   client: algodClient,
-  //   signer,
-  //   sender: accountsMenu.selectedOptions[0].value,
-  //   appId: APPID,
-  // });
+buttons.optin_to_contract.onclick = async () => {
+  const stakeApp = new Stake({
+    client: algodClient,
+    signer,
+    sender: accountsMenu.selectedOptions[0].value,
+    appId: APPID,
+  });
 
-  // const result = await stakeApp.optIn();
-  // console.log(result);
+  const result = await stakeApp.optIn();
+  console.log(result);
 };
 
 buttons.stake.onclick = async () => {
