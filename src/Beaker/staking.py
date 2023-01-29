@@ -49,9 +49,7 @@ class Stake(Application):
         self,
         txn: abi.AssetTransferTransaction,
         key: abi.String,
-        app: abi.Application, # type: ignore[assignment]
-        *,
-        output: abi.Uint64
+        app: abi.Application # type: ignore[assignment]
     ):
         return Seq(
             (asset_id := App.globalGetEx(app=app.application_id(), key=key.get())),
@@ -67,8 +65,7 @@ class Stake(Application):
             ),
             self.is_staking.set(Int(1)),
             self.stake_amount.set(txn.get().asset_amount()),
-            self.stake_timestamp.set(Global.latest_timestamp()),
-            output.set(asset_id.value())
+            self.stake_timestamp.set(Global.latest_timestamp())
         )
 
     @external
