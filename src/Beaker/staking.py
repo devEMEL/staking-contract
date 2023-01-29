@@ -1,6 +1,6 @@
 from pyteal import *
 from typing import Final
-from beaker import Application, AccountStateValue, ApplicationStateValue, external, opt_in, create
+from beaker import Application, AccountStateValue, ApplicationStateValue, external, opt_in, create, Authorize
 
 
 class Stake(Application):
@@ -29,7 +29,7 @@ class Stake(Application):
     def optin(self):
         return self.initialize_account_state()
 
-    @external
+    @external(authorize=Authorize.only(Global.creator_address()))
     def optin_asset(
         self,
         asset_id: abi.Asset # type: ignore[assignment]
