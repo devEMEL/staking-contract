@@ -1,5 +1,5 @@
 ## Staking Contract
-* This is an application where a user can be able to Stake and Unstake ASC to his account and get stake rewards once they stake their ASC.
+* This is an application where a user is able to Stake and Unstake ASC to his account and get staking rewards once they staked their ASC.
 * You can only unstake tokens after 24 Hours of your staking time.
 * The Smart Contract is funded to have enough funds to be able to give you staking rewards.
 
