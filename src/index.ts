@@ -1,4 +1,4 @@
-import "./app.css";
+// import "./app.css";
 import algosdk from "algosdk";
 
 import { MyAlgoSession } from "./wallets/myalgo";
@@ -158,6 +158,7 @@ buttons.unstake.onclick = async () => {
   });
 
   const result = await stakeApp.unstake({
+
     time: BigInt(300),
     asset_id: BigInt(ASSETID),
   });
