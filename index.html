@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algo Smart Staking</title>
-    <link href="./app.css" rel="stylesheet" />
+
     <style>
       *,
       ::before,
@@ -991,7 +991,9 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         Algo Smart - Staking
       </div>
 
-      <select name="accounts" id="accounts" style="display: none;">Select account</select>
+      <select name="accounts" id="accounts" style="display: none">
+        Select account
+      </select>
       <button
         id="connect"
         class="shadow-xl shadow-black text-white bg-green-400 hover:bg-green-600 md:text-xs p-2 rounded-full"
@@ -1005,12 +1007,13 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         class="bg-[#151c25] py-4 flex flex-col justify-center items-center shadow-md shadow-green-500 rounded-xl w-[400px] h-auto mt-28"
       >
         <button
-        id="optin_to_contract" class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full"
+          id="optin_to_contract"
+          class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full"
         >
           Optin To Contract
         </button>
 
-        <form class="flex w-full max-w-[300px]">
+        <div class="flex w-full max-w-[300px]">
           <div class="flex items-center w-full">
             <input
               class="block w-[60%] rounded-md bg-transparent border-1 border-green-400 text-sm py-3 text-slate-500 focus:border-green-400 focus:outline-none cursor-pointer focus:ring-0"
@@ -1022,14 +1025,16 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
               id="stake_amount"
             />
             <button
-              class="my-2 w-[40%] ml-1 text-white bg-green-400 hover:bg-green-600 px-4 py-3 rounded-md" id="stake"
+              class="my-2 w-[40%] ml-1 text-white bg-green-400 hover:bg-green-600 px-4 py-3 rounded-md"
+              id="stake"
             >
               Stake
             </button>
           </div>
-        </form>
+        </div>
         <button
-          class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full" id="unstake"
+          class="w-full max-w-[300px] my-2 text-white bg-green-400 hover:bg-green-600 p-2 py-3 rounded-full"
+          id="unstake"
         >
           Unstake ASC
         </button>
