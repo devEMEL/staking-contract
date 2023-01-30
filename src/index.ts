@@ -159,7 +159,7 @@ buttons.unstake.onclick = async () => {
 
   const result = await stakeApp.unstake({
 
-    time: BigInt(300),
+    time: BigInt(120),
     asset_id: BigInt(ASSETID),
   });
   console.log(result);
