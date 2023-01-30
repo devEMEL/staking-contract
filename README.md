@@ -6,3 +6,4 @@
 * Before you Stake and Unstake you first have to connect your wallet and Opt in to the Smart Contract.
 
 [ASC Staking App](https://zesty-dodol-f2e0dd.netlify.app/)  
+[Staking App on Algo Explorer](https://testnet.algoexplorer.io/application/156323953)  
